@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+src="https://code.jquery.com/jquery-3.6.1.js"
+integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+crossorigin="anonymous">
+</script>
+<h1>Fill in your personal information</h1>
+<script>
+$(document).ready(function(){
+    $(".part2").hide();
+    $(".part3").hide();
+    $(".part4").hide();
+  $("#next1").click(function(){
+    $(".part1").hide();
+    $(".part3").hide();
+    $(".part4").hide();
+    $(".part2").show()});
+  $("#back1").click(function(){
+    $(".part1").show();
+    $(".part2").hide()
+    $(".part3").hide()
+    $(".part4").hide()});
+
+  $("#next2").click(function(){
+    $(".part2").hide();
+    $(".part1").hide();
+    $(".part4").hide();
+    $(".part3").show()});
+  $("#back2").click(function(){
+    $(".part2").show()
+    $(".part3").hide()
+    $(".part4").hide()
+    $(".part1").hide()});
+
+  $("#next3").click(function(){
+    $(".part3").hide();
+    $(".part1").hide();
+    $(".part2").hide();
+    $(".part4").show()});
+  $("#back3").click(function(){
+    $(".part3").show()
+    $(".part4").hide()
+    $(".part2").hide()
+    $(".part1").hide()});
+
+  $("#next4").click(function(){
+    $(".part4").hide()
+    $(".part1").hide();
+    $(".part2").hide();
+    $(".part3").hide();});
+  $("#back4").click(function(){
+    $(".part4").show()
+    $(".part2").hide()
+    $(".part3").hide()
+    $(".part1").hide()});
+});
+</script>
+<style>
+    h1{
+            color: rgb(125, 66, 82);
+            width: 90%;
+            max-width: 10000px;
+            font-size: 45px;
+            font-family: 'Kaushan Script', cursive;
+            text-align: center;
+        }
+body {background-color: rgb(221, 129, 167);
+    margin-left: 500px; 
+        margin-right: 500px;
+        text-align: center;
+        font-size: 23px;
+            font-family: 'Kaushan Script', cursive;
+}
+button{
+    font-size: 15px;
+    font-family: 'Kaushan Script', cursive;
+}
+</style>
+
+</head>
+
+ 
+
+<body>
+    <form action="2_display.php" method="get">
+    <div class="part1">
+    First name: <input type="text" name="fname" autocomplete="off" autofocus="on" required><br>
+    Last name: <input type="text" name="lname" autocomplete="off" required><br></div>
+        PART1   <button id="back1">Back</button>
+        <button id="next1">Next</button><br><hr>
+    <div class="part2">
+        Phone number: <input type="text" name="phone" autocomplete="off" autofocus="on" required><br>
+        Email: <input type="email" name="email" autocomplete="off" required><br></div>
+        PART 2   <button id="back2">Back</button>
+        <button id="next2">Next</button><br><hr>
+    <div class="part3">
+    Job: <input type="text" name="job" autofocus="on" autocomplete="off" required><br>
+    Hobby: <input type="text" name="hobby" autocomplete="off" required><br></div>
+        PART 3   <button id="back3">Back</button>
+        <button id="next3">Next</button><br><hr>
+    <div class="part4"> 
+        Your comments:<br> 
+        <textarea name="comment1" placeholder="Enter your comment" autocomplete="off" autofocus="on" required></textarea><br>
+        <textarea name="comment2" placeholder="Enter your comment" autocomplete="off" autofocus="on" required></textarea><br>
+        <textarea name="comment3" placeholder="Enter your comment" autocomplete="off" autofocus="on" required></textarea><br></div>
+        PART 4   <button id="back4">Back</button>
+        <button id="next4">SUBMIT</button><br><hr>
+    </form>
+
+</body>
+
+</html>
